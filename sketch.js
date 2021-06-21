@@ -80,12 +80,12 @@ function draw() {
     bugs[i].display();
   }
 
-  M1 = avgMotion1 * 4;
-  M2 = avgMotion2 * 4;
-  M3 = avgMotion3 * 4;
-  M4 = avgMotion4 * 4;
-  M5 = avgMotion5 * 4;
-  M6 = avgMotion6 * 4;
+  M1 = avgMotion1 * 2;
+  M2 = avgMotion2 * 2;
+  M3 = avgMotion3 * 2;
+  M4 = avgMotion4 * 2;
+  M5 = avgMotion5 * 2;
+  M6 = avgMotion6 * 2;
   xoff += 0.1;
   let noiseM1 = map(noise(xoff),0,1,-M1/2,M1/2);
   xoff += 0.1;
