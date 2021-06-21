@@ -80,12 +80,12 @@ function draw() {
     bugs[i].display();
   }
 
-  M1 = avgMotion1 * 2;
-  M2 = avgMotion2 * 2;
-  M3 = avgMotion3 * 2;
-  M4 = avgMotion4 * 2;
-  M5 = avgMotion5 * 2;
-  M6 = avgMotion6 * 2;
+  M1 = avgMotion1 * 5;
+  M2 = avgMotion2 * 5;
+  M3 = avgMotion3 * 5;
+  M4 = avgMotion4 * 5;
+  M5 = avgMotion5 * 5;
+  M6 = avgMotion6 * 5;
   xoff += 0.1;
   let noiseM1 = map(noise(xoff),0,1,-M1/2,M1/2);
   xoff += 0.1;
@@ -154,7 +154,7 @@ class Jitter {
   }
 
   move() {
-    fill(random(M1+M4),random(M2+M5),random(M3+M6),random(M1*5+M2*5+M3*5+M4*5+M5*5+M6*5));
+    fill(random(M1+M4),random(M2+M5),random(M3+M6),random(M1+M2+M3+M4+M5+M6));
     this.x += random(10, this.speedX);
     this.y += random(-this.speedY, this.speedY);
     if (this.x > width) {
