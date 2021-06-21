@@ -154,7 +154,7 @@ class Jitter {
   }
 
   move() {
-    fill(random(M1,M6),random(M2,M5),random(M3,M4),-M1+M2-M3+M4+M5-M6);
+    fill(random(M1,M6),random(M2,M5),random(M3,M4),(-M1+M2-M3+M4+M5-M6);
     this.x += random(10, this.speedX);
     this.y += random(-this.speedY, this.speedY);
     if (this.x > width) {
