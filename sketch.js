@@ -40,7 +40,7 @@ function setup() {
   prevPixels = Array(4 * video.width * video.height).fill(0);
   pixelDiffs = Array(video.width * video.height).fill(0);
 
-  for (let i = 0; i < 35; i++) {
+  for (let i = 0; i < 45; i++) {
     bugs.push(new Jitter());
   }
   
@@ -148,13 +148,13 @@ class Jitter {
   constructor() {
     this.x = random(width);
     this.y = random(height);
-    this.diameter = random(5, 10);
-    this.speedY = 20;
-    this.speedX = 50;
+    this.diameter = random(5, 15);
+    this.speedY = 50;
+    this.speedX = 15;
   }
 
   move() {
-    fill(random(M1+M4),random(M2+M5),random(M3+M6),0);
+    fill(random(M1+M4),random(M2+M5),random(M3+M6),random(M1+M2+M3-M4+M5+M6));
     this.x += random(10, this.speedX);
     this.y += random(-this.speedY, this.speedY);
     if (this.x > width) {
